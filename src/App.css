@@ -1,0 +1,316 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+.main-container {
+  background-color: black !important;
+}
+
+#main {
+  background-color: #efeae3;
+  position: relative;
+  z-index: 10;
+
+}
+#page1 {
+  position: relative;
+  width: 100%;
+
+  min-height: 100vh;
+
+  padding: 0 2vw;
+}
+
+nav {
+  padding: 2vw 0vw;
+  display: flex;
+
+  justify-content: space-between;
+}
+.nav-items {
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+}
+.nav-items h4 {
+  position: relative;
+  font-weight: 600;
+  color: #161616b3;
+  padding: 0.5vw 1.5vw;
+  font-size: 18px;
+  border: 1px solid rgba(0, 0, 0, 0.331);
+  border-radius: 50px;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.nav-items h4::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  left: 0;
+  border-radius: 50%;
+  bottom: -100%;
+  height: 100%;
+  background-color: #0d0d0d;
+  transition: all 0.4s ease;
+}
+.nav-items h4:hover::after {
+  border-radius: 0;
+  bottom: 0;
+}
+
+.nav-items h4 a {
+  text-decoration: none;
+  color: #161616b3;
+  z-index: 9;
+  position: relative;
+}
+.nav-items h4:hover a {
+  color: #fff;
+}
+
+#center {
+  height: 65vh;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 2vw;
+  /* background-color: orange;     */
+  justify-content: space-between;
+}
+
+#left h3 {
+  width: 25vw;
+  font-size: 1.8vw;
+  line-height: 2vw;
+}
+
+#center h1 {
+  font-size: 10vw;
+  text-align: right;
+  line-height: 8vw;
+}
+
+#page1 video {
+  margin-top: 3vw;
+  width: 100%;
+  position: relative;
+  border-radius: 30px;
+}
+
+#circle {
+  position: absolute;
+  right: 0;
+  top: 65vh;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  background-color: #fe350a;
+  height: 36vw;
+  filter: blur(15px);
+
+  width: 44vw;
+  /* animation-name: anime1;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-iteration-count: infinite; */
+}
+#c1 {
+  position: absolute;
+  filter: blur(20px);
+  border-radius: 50%;
+  background-color: #fe350a;
+  height: 30vw;
+
+  width: 30vw;
+  animation-name: anime1;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+#c2 {
+  position: absolute;
+  height: 30vw;
+  width: 30vw;
+  filter: blur(20px);
+
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+
+  background-color: #fe350a;
+  animation-name: anime1;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+#c3 {
+  position: absolute;
+  height: 30vw;
+  width: 30vw;
+  filter: blur(20px);
+
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+
+  background: linear-gradient(#fe350a, #fe4319);
+  animation-name: anime1;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+/* Animation for oranges divs(PAGE !1) ---------------------------------------------------------- */
+@keyframes anime1 {
+  from {
+    transform: translate(-10%, 10%);
+  }
+  to {
+    transform: translate(10%, -10%);
+  }
+}
+
+/* Page 2 ------------------------------------------------------------------------------------------------------------ */
+
+#page2 {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  padding: 6vw 0;
+}
+
+#page2 .gooeyyy {
+  height: 32vw;
+  width: 32vw;
+
+  border-top-right-radius: 50%;
+  border-bottom-left-radius: 25%;
+  border-bottom-left-radius: 10%;
+  position: absolute;
+  top: 58%;
+  left: 20%;
+  border-radius: 50%;
+  filter: blur(20px);
+
+  background: linear-gradient(to top right, #ff6a07d2, #fe4e14);
+  animation-name: goeey;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+}
+
+@keyframes goeey {
+  from {
+    filter: blur(20px);
+    transform: translate(10%, -10%) skew(0);
+  }
+  to {
+    transform: translate(-10%, 10%) skew(-12deg);
+    filter: blur(30px);
+  }
+}
+
+/* Page 3 -------------------------------------------------------------------------------------------- */
+
+#page3 {
+  min-height: 100vh;
+  width: 100%;
+  padding: 0 0;
+}
+.elem {
+  position: relative;
+  height: 11vw;
+  width: 100%;
+  display: flex;
+  padding: 0 2vw;
+  align-items: center;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.17);
+}
+.elem:hover .overlay {
+  top: 0;
+  /* transition: all 0.3s ease-in; */
+}
+
+.elem h2 {
+  font-size: 3vw;
+  z-index: 1;
+  position: relative;
+}
+.elem .overlay {
+  position: absolute;
+  transition: all 0.2s ease-in;
+
+  top: -100%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #ffa500;
+}
+
+.hoverimg {
+  position: fixed;
+  top: 25%;
+  object-fit: cover;
+  box-shadow: 50px 30px 80px grey;
+  z-index: 99;
+  left: 50%;
+  border-top: 4px solid lightsalmon;
+  border-radius: 37px;
+  height: 30vw;
+  width: 24vw;
+}
+#page4 {
+  height: 80vh;
+  width: 100%;
+  background-color: #efeae3;
+  padding: 9vw 0vw;
+  /* margin-bottom: 10px; */
+}
+#page5{
+  height: 100vh;
+ width: 100%;
+  width: 100%;
+  color: rgb(255, 239, 239);
+}
+
+
+#footer{
+  
+  z-index: 5;
+  height: 104vh;
+  width: 100%;
+  position: fixed;
+  padding: 0 5vw;
+
+
+  bottom: 0;
+  left: 0;
+  align-items: center;
+  display: table-column;
+}
+
+#footer h1{
+  font-size: 22vw;
+}
+.footChilds{
+  justify-content: space-between;
+  padding: 0vw 3vw;
+  font-weight: 700;
+  align-items: center;
+  display: flex;
+  gap: 20px;
+}
+
+#footer .footlight{
+
+  height: 20vh;
+  filter: blur(20px);
+  width: 100%;
+  background: red;
+}
